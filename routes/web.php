@@ -18,4 +18,6 @@ Route::get('/', function () {
 });
 
 // Route for Category
-Route::get('category-list',('App\Http\Controllers\CategoryController@categoryList'));
+Route::get('category-list','App\Http\Controllers\CategoryController@categoryList')->name('categoryList');
+Route::get('add-new-category','App\Http\Controllers\CategoryController@addNewCategory')->name('addNewCategory');
+Route::post('save-category','App\Http\Controllers\CategoryController@saveCategory')->name('saveCategory');
